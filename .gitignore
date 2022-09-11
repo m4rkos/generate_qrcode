@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+qr_codes/*
+*.jpg
+*.jpeg
+*.png
+*.gif
