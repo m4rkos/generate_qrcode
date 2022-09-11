@@ -1,8 +1,6 @@
 __pycache__
 .vscode
 qrcode_venv
-qr_codes/*
 *.jpg
 *.jpeg
-*.png
 *.gif
