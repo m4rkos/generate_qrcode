@@ -11,8 +11,11 @@ class Tools:
     def save_qrcode(self, value=base_url):
         img = qrcode.make(value)
         type(img)  # qrcode.image.pil.PilImage
-        name = uuid.uuid4()
-        img.save(f"./qr_codes/{name}.png")
+        uid = uuid.uuid4()
+        name = f"/qr_codes/{uid}.png"
+        img.save(f"./static/{name}")
+
+        return {'name': name, 'id': uid}
 
 
     def generate_qrcode_custom(self, value=base_url):

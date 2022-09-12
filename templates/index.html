@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generate</title>
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+    <form action="/generate" method="post">
+        <p><b>Text or URL: </b><input type="text" name="item" id="item"></p>
+        <input type="submit" class="btn-main" value="Generate">
+    </form>
+    <br>
+    <h2><code>example: {{label}}</code></h2>
+    <img src='{{qr_code}}' style="max-width: 300px; width: 100%;" alt='{{label}}' />
+</body>
+</html>

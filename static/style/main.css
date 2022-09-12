@@ -1,0 +1,10 @@
+.btn-main {
+    border: none;
+    padding: 1rem; 
+    background-color: #006eff; color: #fff; 
+    font-family: Arial, Helvetica, sans-serif; 
+    text-decoration: none; border-radius: 5px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
