@@ -1,8 +1,6 @@
-from multiprocessing.util import is_exiting
 import os
-from crypt import methods
 from class_tools import Tools
-from flask import Flask, render_template, redirect, url_for, session, request
+from flask import Flask, render_template, redirect, request
 from flask_cors import CORS
 
 app = Flask(__name__, template_folder='./templates', static_url_path='', static_folder='./static')
