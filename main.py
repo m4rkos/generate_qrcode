@@ -1,3 +1,5 @@
+from multiprocessing.util import is_exiting
+import os
 from crypt import methods
 from class_tools import Tools
 from flask import Flask, render_template, redirect, url_for, session, request
@@ -19,10 +21,13 @@ def base():
     value = 'https://google.com'
     print(f"\n{value}\n")
 
-    qr_image = a.save_qrcode(value)
+    qr_image = 'qr_codes/02648d98-c7d5-487b-96a2-005b474d62f1.png'
+    if os.path.exists(f'./static/{qr_image}') == False:
+        qr_image = a.save_qrcode(value)['name']
+    
     a.show_qrcode(value)
 
-    return render_template("index.html", qr_code=qr_image['name'], label=value)
+    return render_template("index.html", qr_code=qr_image, label=value)
 
 
 @app.route("/generate", methods=['POST'])
